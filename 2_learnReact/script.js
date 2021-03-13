@@ -52,6 +52,10 @@ var elementWithJsxObject = {
 //   document.getElementById('root')
 // );
 
+// Reactの要素はイミュータブルであり、UIを変更するには新しい要素をReact.render()に渡さなければならない
+// そして、Reactは毎秒UIツリー全体を作成したとしても、内容が変更された箇所のみが更新される。（仮想DOMだからこれができる？）
+// 通常はステート付コンポーネント内でステートをいじり、UIを動かしていく
+
 function tick() {
   var element = React.createElement(
     'div',
