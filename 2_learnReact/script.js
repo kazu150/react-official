@@ -47,4 +47,29 @@ var elementWithJsxObject = {
   }
 }; //これは動かない。Doc側でわかりやすく説明するために用意してくれた疑似Reactオブジェクトってことかな
 
-ReactDOM.render(elementWithJsxCreateElement, document.getElementById('root'));
+// ReactDOM.render(
+//   elementWithJsxCreateElement,
+//   document.getElementById('root')
+// );
+
+function tick() {
+  var element = React.createElement(
+    'div',
+    null,
+    React.createElement(
+      'h1',
+      null,
+      'Hello, world!'
+    ),
+    React.createElement(
+      'h2',
+      null,
+      'It is ',
+      new Date().toLocaleTimeString(),
+      '.'
+    )
+  );
+  ReactDOM.render(element, document.getElementById('root'));
+}
+
+setInterval(tick, 1000);
