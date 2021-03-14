@@ -14,22 +14,24 @@ var Toggle = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Toggle.__proto__ || Object.getPrototypeOf(Toggle)).call(this, props));
 
-    _this.handleClick = function () {
-      _this.setState(function (state) {
-        return {
-          isToggleOn: !state.isToggleOn
-        };
-      });
-    };
-
     _this.state = { isToggleOn: true };
 
     // This binding is necessary to make `this` work in the callback
-    // this.handleClick = this.handleClick.bind(this);
+    _this.handleClick = _this.handleClick.bind(_this);
     return _this;
   }
 
   _createClass(Toggle, [{
+    key: 'handleClick',
+    value: function handleClick() {
+      //   handleClick = () => { ←解決法２
+      this.setState(function (state) {
+        return {
+          isToggleOn: !state.isToggleOn
+        };
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
       return React.createElement(
