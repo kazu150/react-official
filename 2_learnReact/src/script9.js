@@ -1,3 +1,5 @@
+// stateの同期をするなら、共通の祖先コンポーネントにリフトアップしよう
+
 const scaleNames = {
   c: 'Celsius',
   f: 'Fahrenheit'
