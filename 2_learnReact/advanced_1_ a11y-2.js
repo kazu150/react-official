@@ -100,3 +100,5 @@ var BlurExample = function (_React$Component) {
 }(React.Component);
 
 ReactDOM.render(React.createElement(BlurExample, null), document.getElementById('root'));
+
+// 常にキーボードを使ってテストしていると、問題がすぐ見つかってよい

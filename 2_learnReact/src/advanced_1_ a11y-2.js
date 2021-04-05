@@ -60,3 +60,5 @@ ReactDOM.render(
   <BlurExample />,
   document.getElementById('root')
 )
+
+// 常にキーボードを使ってテストしていると、問題がすぐ見つかってよい
